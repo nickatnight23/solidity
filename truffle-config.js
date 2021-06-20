@@ -19,7 +19,7 @@
  */
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const infuraKey = "fj4jll3k.....";
+const infuraKey = "Infura Project ID";
 //
 // const fs = require('fs');
 const mnemonic = fs.readFileSync(".secret").toString().trim();
@@ -50,7 +50,7 @@ module.exports = {
 
     // Another network with more advanced options...
     rinkeby: {
-      provider: () =>new HDWalletProvider(mnemonic,``),             // Custom port
+      provider: () =>new HDWalletProvider(mnemonic,`https://rinkeby.infura.io/v3/8b8a90809a1d48f0bee8359a0eef63d9`),             // Custom port
       network_id: 4,       // Custom network
       gas: 4500000,           // Gas sent with each transaction (default: ~6700000)
       gasPrice: 10000000000,  // 20 gwei (in wei) (default: 100 gwei)
